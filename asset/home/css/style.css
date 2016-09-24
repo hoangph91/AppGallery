@@ -1,0 +1,189 @@
+div.container {   
+    border: 1px solid blue;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color:   #32CD32;
+    clear: left;
+    text-align: center;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+article {
+    margin:10px;
+    border: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+
+        .tk-proxima-nova {
+            font-family: "proxima-nova", sans-serif;
+        }
+        @font-face {
+            font-family: proxima-nova;
+            src: url(https://fonts.typekit.net/af/03034e/00000000000000003b9ad1b1/27/l?subset_id=2&fvd=n7) format("woff2");
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: proxima-nova;
+            src: url(https://fonts.typekit.net/af/921f74/00000000000000003b9ad1bb/27/l?subset_id=2&fvd=n6) format("woff2");
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: proxima-nova;
+            src: url(https://fonts.typekit.net/af/edab9a/00000000000000003b9ad1b9/27/l?subset_id=2&fvd=n4) format("woff2");
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: proxima-nova;
+            src: url(https://fonts.typekit.net/af/015ec8/00000000000000003b9ad1b5/27/l?subset_id=2&fvd=n3) format("woff2");
+            font-weight: 300;
+            font-style: normal;
+        }
+
+
+body{
+    background: #FFF;
+    font-family: proxima-nova, Lato, "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    line-height:1.4;
+    width:100%;
+    height: 100%;   
+    margin: 0;
+}
+.text-center{
+    text-align: center;
+}
+.content{
+    width: 600px;
+    margin: 20px 0 40px;
+    background: blue;
+    display: inline;
+    box-sizing: border-box;
+}
+ #collection-list{
+    padding: 20px;
+    width: 1000px;
+    text-align: center;
+    margin:0 auto;
+}
+.image-item{
+    width: auto;
+    height: auto;
+    margin: 10px 5px 10px 5px;
+    display:inline-block;
+    box-sizing: content-box; 
+    background-size: cover; 
+    background-position: 50% 50%; 
+}
+#collection-list .image-item:hover{
+    opacity: 0.7;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.marginless-left{
+    margin-left: 5px;
+}
+
+#btn-close{
+    color: rgb(204, 204, 204);
+    top: 10px;
+    right: 5px;
+    cursor: pointer;
+    display: block;
+    position: fixed;
+    text-align: center;
+}
+#btn-close:hover{
+    color: rgb(51, 51, 51);
+}
+
+#btn-left{
+    color: #E8E8E8;
+    top: 50%;
+    left: 5px;
+    cursor: pointer;
+    text-align: center;
+    position: absolute;
+}
+#btn-left:hover{
+    color: rgb(51, 51, 51);
+}
+
+#btn-right{
+    color: #E8E8E8;
+    top: 50%;
+    right: 10px;
+    cursor: pointer;
+    text-align: center;
+    position: absolute;
+}
+#btn-right:hover{
+    color: rgb(51, 51, 51);
+}
+
+#divShow{
+    border: 2px solid red;
+    position: fixed;
+        top: 0;
+        left: 0;
+    max-width: 100%;
+        width: 100%;
+        height: 100%;
+    display: none;    
+    padding: 50px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.92);
+}
+#showImage{
+    border: 3px solid green;
+    display: none;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    float: right;
+    background-position: center;
+    background-size: contain;
+}
+#myImage {
+    /*max-width: 100%;
+    max-height: 100%;*/
+    margin-left: auto;
+    margin-top: auto;
+    margin-right: auto;
+}
