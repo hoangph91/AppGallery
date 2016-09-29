@@ -1,5 +1,4 @@
 div.container {   
-    border: 1px solid blue;
     width: 1200px;
     margin: 0 auto;
 }
@@ -157,7 +156,6 @@ body{
 }
 
 #divShow{
-    border: 2px solid red;
     position: fixed;
         top: 0;
         left: 0;
@@ -170,7 +168,6 @@ body{
     background: rgba(255, 255, 255, 0.92);
 }
 #showImage{
-    border: 3px solid green;
     display: none;
     max-width: 100%;
     width: 100%;
