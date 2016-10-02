@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'https://hoang.nghetinh.org/Gallery/Gallery';
+$config['base_url'] = 'https://nghetinh.org/Gallery/Gallery';
 
 /*
 |--------------------------------------------------------------------------
