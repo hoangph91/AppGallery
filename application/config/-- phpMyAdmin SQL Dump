@@ -1,0 +1,110 @@
+-- phpMyAdmin SQL Dump
+-- version 4.5.1
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: Sep 30, 2016 at 06:20 PM
+-- Server version: 10.1.13-MariaDB
+-- PHP Version: 7.0.8
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `db_gallery`
+--
+CREATE DATABASE IF NOT EXISTS `db_gallery` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+USE `db_gallery`;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `albums`
+--
+
+DROP TABLE IF EXISTS `albums`;
+CREATE TABLE `albums` (
+  `id_album` int(11) NOT NULL,
+  `name_album` varchar(220) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `albums`
+--
+
+INSERT DELAYED INTO `albums` (`id_album`, `name_album`) VALUES(15, 'Sơn Tùng ');
+INSERT DELAYED INTO `albums` (`id_album`, `name_album`) VALUES(14, 'Vũ Trụ ');
+INSERT DELAYED INTO `albums` (`id_album`, `name_album`) VALUES(13, 'Người Nỗi Tiếng ');
+INSERT DELAYED INTO `albums` (`id_album`, `name_album`) VALUES(12, 'Hoài Linh');
+INSERT DELAYED INTO `albums` (`id_album`, `name_album`) VALUES(11, 'Ngọc Trinh');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `images`
+--
+
+DROP TABLE IF EXISTS `images`;
+CREATE TABLE `images` (
+  `id` int(11) NOT NULL,
+  `id_album` int(220) NOT NULL,
+  `name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `image` longblob NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `images`
+--
+
+INSERT DELAYED INTO `images` (`id`, `id_album`, `name`, `image`) VALUES(46, 8, '', 0x31323138373930345f3438373130323437383131353937385f323439333034353134343239373835393931325f6e382e6a7067);
+INSERT DELAYED INTO `images` (`id`, `id_album`, `name`, `image`) VALUES(47, 5, '', 0x686f6e6732382e6a7067);
+INSERT DELAYED INTO `images` (`id`, `id_album`, `name`, `image`) VALUES(48, 6, '', 0x686f6e676e68756e6731302e6a7067);
+INSERT DELAYED INTO `images` (`id`, `id_album`, `name`, `image`) VALUES(49, 7, '', 0x686f6e6732392e6a7067);
+INSERT DELAYED INTO `images` (`id`, `id_album`, `name`, `image`) VALUES(50, 7, '', 0x686f6e6733302e6a7067);
+INSERT DELAYED INTO `images` (`id`, `id_album`, `name`, `image`) VALUES(51, 6, '', 0x686f6e676e68756e6731312e6a7067);
+INSERT DELAYED INTO `images` (`id`, `id_album`, `name`, `image`) VALUES(52, 9, '', 0x686f6e6733312e6a7067);
+INSERT DELAYED INTO `images` (`id`, `id_album`, `name`, `image`) VALUES(53, 15, '', 0x736f6e74756e67322e6a7067);
+INSERT DELAYED INTO `images` (`id`, `id_album`, `name`, `image`) VALUES(54, 15, '', 0x736f6e74756e67332e6a7067);
+INSERT DELAYED INTO `images` (`id`, `id_album`, `name`, `image`) VALUES(55, 15, '', 0x736f6e74756e67372e6a7067);
+INSERT DELAYED INTO `images` (`id`, `id_album`, `name`, `image`) VALUES(56, 15, '', 0x736f6e74756e6732312e6a7067);
+INSERT DELAYED INTO `images` (`id`, `id_album`, `name`, `image`) VALUES(57, 15, '', 0x736f6e74756e6733312e6a7067);
+INSERT DELAYED INTO `images` (`id`, `id_album`, `name`, `image`) VALUES(58, 11, '', 0x6e676f637472696e68312e6a7067);
+INSERT DELAYED INTO `images` (`id`, `id_album`, `name`, `image`) VALUES(59, 11, '', 0x6e676f637472696e68322e6a7067);
+INSERT DELAYED INTO `images` (`id`, `id_album`, `name`, `image`) VALUES(60, 11, '', 0x6e676f637472696e68332e6a7067);
+INSERT DELAYED INTO `images` (`id`, `id_album`, `name`, `image`) VALUES(61, 11, '', 0x6e676f637472696e68342e6a7067);
+INSERT DELAYED INTO `images` (`id`, `id_album`, `name`, `image`) VALUES(62, 11, '', 0x6e676f637472696e68362e6a7067);
+INSERT DELAYED INTO `images` (`id`, `id_album`, `name`, `image`) VALUES(63, 11, '', 0x6e676f637472696e68372e6a7067);
+INSERT DELAYED INTO `images` (`id`, `id_album`, `name`, `image`) VALUES(64, 11, '', 0x6e676f637472696e68382e6a7067);
+INSERT DELAYED INTO `images` (`id`, `id_album`, `name`, `image`) VALUES(65, 11, '', 0x6e676f637472696e68392e6a7067);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `albums`
+--
+ALTER TABLE `albums`
+  ADD PRIMARY KEY (`id_album`);
+
+--
+-- Indexes for table `images`
+--
+ALTER TABLE `images`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_album` (`id_album`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `albums`
+--
+ALTER TABLE `albums`
+  MODIFY `id_album` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+--
+-- AUTO_INCREMENT for table `images`
+--
+ALTER TABLE `images`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;

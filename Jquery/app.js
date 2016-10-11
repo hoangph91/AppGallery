@@ -13,14 +13,14 @@ $(document).ready(function() {
         var imgURL = $(element).css('background-image').slice(5, -2);
         imgURL = "url('" + imgURL + "')";
         if (isFirst === true) {
-            //$("#showImage").animate({opacity: '0.4'});
-            $("#showImage").css("background-image", imgURL);
-            $("#showImage").css("background-repeat", "no-repeat");
             $("#showImage").fadeIn("fast", function() {
+                $("#menu").css("display","none");
+                $("#showImage").css("background-image", imgURL);
+                $("#showImage").css("background-repeat", "no-repeat");
                 $("#divShow").css("display", "block");
                 scrollBody(false);
                 $("#showImage").css("display", "block");
-                $("#showImage").animate({opacity: '0.9'});
+                $("#showImage").animate({opacity: '1'});
             });
         } else {
             $("#showImage").css("background-image", imgURL);
@@ -39,15 +39,16 @@ $(document).ready(function() {
     };
 
     $(".image-item").on("click", function() {
-        console.log(5);
         currIndex = slideIndex(this);
+        console.log(currIndex);
         showImageFunc(currIndex, true);
     });
 
      /* Set button */
     $("#btn-close").on("click", function() {
-        $("#showImage").css("display", "none");
-        $("#divShow").css("display", "none");
+        $("#menu").show();
+        $("#showImage").css("display","none")
+        $("#divShow").css("display","none");
          scrollBody(true);
 
     });

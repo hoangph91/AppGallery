@@ -11,19 +11,19 @@
     
 </head>
 <body>
-<h1 align="center">Album Images</h1>
-<div class="content">
-        <div id="collection-list">
-	        <?php foreach ($info as $item):?>
-	            <div class="image-item text-center" style="background-image:url(<?php echo base_url(). 'uploads/'.$item['image']?>);  width: 300px; height:300px;"> </div>
-	       <?php endforeach ;?>
-       </div>
+<div id="collection-list">
+            <?php foreach ($info as $item):?>
+                <div class="" style="background-image:url(<?php echo base_url(). 'uploads/'.$item['image']?>);  width: 300px; height:300px;">
+                 </div>
+           <?php endforeach ;?>
 </div>
-     <div id="divShow" style="max-width:100%">
+<!--show full Images-->
+    <div id="divShow" style="max-width:100%">
                 <i id="btn-close" class="material-icons" style="font-size:30px;">close</i>
                 <i id="btn-left" class="fa fa-angle-left" style="font-size:48px;"></i>
                 <i id="btn-right" class="fa fa-angle-right" style="font-size:48px;"></i>
                 <div id="showImage" style="max-width:100%"></div>
     </div>
+
 </body>
 </html>

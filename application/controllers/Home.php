@@ -14,7 +14,7 @@ class Home extends CI_Controller
 		$data["subview"] = "home/show_image";
 		$data["titlePage"] = "Images";
 		$data["info"] = $this->Home_Model->getAlbumById($id_album);
-		$this->load->view("home/main", $data);
+		$this->load->view("home/main_image", $data);
 	}
 	public function showAlbum()
 	{

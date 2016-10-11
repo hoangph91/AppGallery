@@ -1,48 +1,79 @@
-div.container {   
-    width: 1200px;
-    margin: 0 auto;
+#search{
+    background-color: #f8f8f8;
+    padding: 5px;
+    border: 0;
+    outline: none;
+    display: none;
 }
+input[type=text]:focus {
+    border: 0
+}
+#icon-search{
+    font-size: 1.33333333em;
+    float: right;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+a span:hover{
+    color:#666;
+}
+a span{
+    color:#bbb;
+}
+.form-search{
+    padding-top: 25px;
+    float: right;
+}
+.copy-right {
+    color:#ccc;
+    text-align: center;
+    font-size: 10px;
+    font-family: proxima-nova,Lato,"Lucida Sans Unicode","Lucida Grande",sans-serif;
+    margin-bottom: 40px;
 
-header, footer {
-    padding: 1em;
-    color: white;
-    background-color:   #32CD32;
-    clear: left;
+}
+.power-by {
+    color: #666;
+    font-weight: 300;
+    font-size: 14px;
+    font-family:  proxima-nova,Lato,"Lucida Sans Unicode","Lucida Grande",sans-serif;
     text-align: center;
 }
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
-
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
+.link-pix{
+    color: #666;
+    border-bottom: 1px solid #666;
+    border-color: rgba(0,0,0,.15);
+    font-size: 14px;
     text-decoration: none;
 }
-
-li a:hover:not(.active) {
-    background-color: #111;
+.footer{
+    padding-bottom: 33px;
+}
+a .image-item:hover{
+    opacity: 0.7;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.logo{
+    width: 100%;
+    margin-top: 100px;
+    text-align: center;
+    font-size: 24px;
+    font-family: proxima-nova, Lato, "Lucida Sans Unicode","Lucida Grande",sans-serif;
+}
+.logo a{
+    letter-spacing: 4px;
+    font-family: proxima-nova, Lato, "Lucida Sans Unicode","Lucida Grande",sans-serif;
+    font-weight: 700;
+    color: #000;
+}
+.logo a:hover{
+    color: #555;
 }
 
-.active {
-    background-color: #4CAF50;
-}
-article {
-    margin:10px;
-    border: 1px solid gray;
-    padding: 1em;
-    overflow: hidden;
-}
+
+
+
 
         .tk-proxima-nova {
             font-family: "proxima-nova", sans-serif;
@@ -87,27 +118,17 @@ body{
 .text-center{
     text-align: center;
 }
-.content{
-    width: 600px;
-    margin: 20px 0 40px;
-    background: blue;
-    display: inline;
-    box-sizing: border-box;
-}
- #collection-list{
-    padding: 20px;
-    width: 1000px;
-    text-align: center;
-    margin:0 auto;
-}
 .image-item{
     width: auto;
     height: auto;
-    margin: 10px 5px 10px 5px;
     display:inline-block;
+    background-image: none;
     box-sizing: content-box; 
     background-size: cover; 
-    background-position: 50% 50%; 
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    padding: 2px;
 }
 #collection-list .image-item:hover{
     opacity: 0.7;
@@ -162,10 +183,10 @@ body{
     max-width: 100%;
         width: 100%;
         height: 100%;
-    display: none;    
-    padding: 50px;
+    display:none;    
+    padding: 0px;
     box-sizing: border-box;
-    background: rgba(255, 255, 255, 0.92);
+    background-color: white;
 }
 #showImage{
     display: none;
@@ -184,3 +205,274 @@ body{
     margin-top: auto;
     margin-right: auto;
 }
+/* CSS co main_image.php*/
+#image-cover{
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center center; 
+    position:relative; 
+}
+#image-cover::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color:rgba(0,0,0,0.4);
+}
+.text-cover{
+    text-align: center;
+}
+
+.back-home{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    z-index: 3;
+    top: 16%;
+}
+.back-home #back-link {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 0;
+    font-size: 11px;
+    color: #fff;
+    font-weight: 300;
+    letter-spacing: 2px;
+
+}
+#back-link:hover{
+    opacity: 0.95;
+}
+.name-album .name{
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    text-align: center;
+    font-family:Montserrat, sans-serif;
+    letter-spacing: 2px;
+    line-height: 54px;
+    font-size: 48px;
+    color:#fff;
+    font-weight: 600;
+
+}
+.view-photto{
+    width: 100%;
+    position: absolute;
+    top:60%;
+    margin-top: 5px;
+    padding: 5px 0;
+}
+.view-photto #link-view{
+    line-height: 14px;
+    font-family: proxima-nova, Lato, "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color:#fff;
+    font-size: 10px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,1);
+    letter-spacing: 2px
+    padding:5px 0;
+}
+#link-view:hover{
+    opacity: 1;
+}
+
+/*  End CSS main_image.php*/
+/* start CSS menu*/
+#link-album{
+  
+    line-height: 16px;
+    text-decoration: none;
+    text-align: left;
+
+}
+.link-name {
+
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: proxima-nova,Lato,"Lucida Sans Unicode","Lucida Grande",sans-serif;
+}
+#link-leek{
+    padding: -5px;
+    font-family:  proxima-nova,Lato,"Lucida Sans Unicode","Lucida Grande",sans-serif;
+    text-decoration: none;
+    float: left;
+    font-size: 9px;
+    color: #999;
+    letter-spacing: 2px;
+}
+#link-leek:hover{
+    color: black;
+}
+#heart:hover{
+    background-color: white;
+}
+#download:hover{
+    background-color: white;
+}
+#share-menu:hover{
+    background-color: white;
+    color: #555;
+}
+#share-menu{
+    font-family: proxima-nova,Lato,"Lucida Sans Unicode","Lucida Grande",sans-serif;
+    font-size: 12px;
+    color:#999;
+}
+#share-world{
+    width: 160px;
+    background-color: #3B3B40;
+    margin-right: 20px;
+}
+#share-world a i{
+    width: 32px;
+    padding: 8px;
+    font-size: 16px;
+    color: white;
+}
+#share-world a{
+    color: white;
+}
+#share-world>li>a:hover{
+    background-color: #58585D;
+}
+#share-world>li>a{
+    padding: 10px 20px 10px 15px;
+    font-size: 14px;
+}
+/*--share--*/
+i{
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
+.share-hover{
+    position: relative;
+    float: right;
+    padding-right: 8px; 
+    transition: all 0.75s;
+    opacity: 1;
+}
+
+.btn-heart{
+    position: absolute;
+    right: 45px;
+    float: right;
+    font-size: 15px;
+    background-color:rgba(0,0,0,.3) ;
+    color:white;
+    padding:7px;
+    border-radius: 2px;
+    margin-left: 5px;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+}
+.btn-heart:hover{
+    background-color: rgba(0,0,0,.5); 
+}
+.btn-share{
+        position: absolute;
+        right: 10px;
+        font-size: 16px;
+        background-color:rgba(0,0,0,.3);
+        color: white;
+        padding: 6px;
+        border-radius: 2px;
+        opacity: 0;
+        transition: all .2s ease-in-out;
+}
+
+.image-item:hover .btn-heart {
+    top:10px;
+    opacity: 1;   
+}
+.image-item:hover .btn-share{
+    top:10px;
+    opacity: 1;
+}
+.share-list{
+    position: absolute;
+    top: 43px;
+    right: 10px;
+    float: right;
+    margin-left: 100px;
+    display: none;
+}
+.share-list a {
+    display: block;
+}
+.btn-face, .btn-twitter, .btn-print, .btn-google, .btn-email{
+        font-size: 16px;
+        background-color:rgba(0,0,0,.3);
+        color: white;
+        padding: 6px;
+        border-radius: 2px;
+}
+.share-hover:hover .btn-share{
+   background-color: rgba(0,0,0,.5); 
+}
+.share-hover:hover .share-list{
+   display: block;
+}
+
+
+
+.btn-face:hover{
+    background-color: #3b5998;
+}
+.btn-twitter:hover{
+    background-color: #00aced;
+}
+.btn-print:hover{
+    background-color: #d64a2d;
+}
+.btn-google:hover{
+    background-color: #cc2127;
+}
+.btn-email:hover{
+    background-color: #999;
+}
+/*back to top*/
+.back-top{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+.btn-back{
+    background-color: #2f2f2f;
+    font-size: 12px;
+    font-weight: 400;
+    font-family:  proxima-nova,Lato,"Lucida Sans Unicode","Lucida Grande",sans-serif;
+    padding:12px 30px;
+    color: white;
+    letter-spacing: 1px;
+}
+.btn-back:hover{
+    color: white;
+    background-color: #555;
+}
+#slide-show, #like-show, #share-show {
+    background-color: white;
+    color: #888;
+    font-size: 14px;
+    font-family: proxima-nova,Lato,"Lucida Sans Unicode","Lucida Grande",sans-serif;
+
+}
+#slide-show i{
+    color: #888;
+}
+#share-show i{
+    color: #888;
+}
+#like-show i{
+    color: #888;
+}
+#slide-show, #like-show,#share-show:hover{
+    background-color: white;
+    color: black;
+}
+
