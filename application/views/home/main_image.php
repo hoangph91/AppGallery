@@ -17,6 +17,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
    <script language="javascript" src="<?php echo base_url();?>Jquery/app.js"></script>
+
   <style type="text/css">
     .nav .open>a, .nav .open>a:focus, .nav .open>a:hover{
           background-color: white;
@@ -140,6 +141,11 @@
               </li>
            </ul>
           </li>
+          <li>
+            <a href="#" id="like-facebook" style="background-color: white">
+              <iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fleekaphoto.pixieset.com%2Fwinchester%2F&width=100&layout=button_count&action=like&show_faces=false&share=false&height=21&appId" width="100" height="21" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            </a>
+          </li>
       </ul>
     </div>
   </div>
@@ -153,37 +159,39 @@
                  <div class="col-sm-3" class="text-center">
                       <div   class="image-item text-center" style="background-image:url(<?php echo base_url(). 'uploads/'.$item['image']?>);  width: 321px; height:214px;">
 
-                        <a href="#"  class="btn-heart">
-                               <i class="fa fa-heart fa-fw"></i>
-                        </a>
-                        <div class="share-hover">
-                            <a href="#" class="btn-share">
-                              <i class="fa fa-share fa-fw"></i>
+                        <ul style="list-style-type: none;">
+                          <li style="float: right;" class="dropdown1">
+                            <a href="#" class="btn1-share">
+                                 <i class="fa fa-share fa-fw"></i>
                             </a>
+                            <div class="drop-share">
+                                <a href="#" class="btn-face">
+                                  <i class="fa fa-fw fa-facebook-square"></i>
+                                </a>
 
+                                <a href="#" class="btn-twitter">
+                                  <i class="fa fa-fw fa-twitter-square"></i>
+                                </a>
 
-                            <div class="share-list">
-                            <a href="#" class="btn-face">
-                              <i class="fa fa-fw fa-facebook-square"></i>
-                            </a>
+                                <a href="#" class="btn-print">
+                                  <i class="fa fa-fw fa-pinterest-square"></i>
+                                </a>
 
-                            <a href="#" class="btn-twitter">
-                              <i class="fa fa-fw fa-twitter-square"></i>
-                            </a>
+                                <a href="#" class="btn-google">
+                                 <i class="fa fa-fw fa-google-plus-square"></i>
+                                </a>
 
-                            <a href="#" class="btn-print">
-                              <i class="fa fa-fw fa-pinterest-square"></i>
-                            </a>
-
-                            <a href="#" class="btn-google">
-                             <i class="fa fa-fw fa-google-plus-square"></i>
-                            </a>
-
-                            <a href="#" class="btn-email">
-                              <i class="fa fa-fw fa-envelope-square"></i>
-                            </a>
-                        </div>
-                        </div>
+                                <a href="#" class="btn-email">
+                                  <i class="fa fa-fw fa-envelope-square"></i>
+                                </a>
+                            </div>
+                          </li>
+                          <li style="float: right;">
+                              <a href="#" class="btn1-heart">
+                                  <i class="fa fa-heart fa-fw"></i>
+                              </a>
+                          </li>
+                        </ul>
                         
                       </div>
                  </div>
