@@ -3,21 +3,18 @@
 <head>
 	<title></title>
 	<meta charset="utf-8">
-  	<meta name="viewport" content="width=device-width, initial-scale=1">
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>asset/home/css/style.css">
-	
-    <link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>asset/home/css/style.css">
+	
+  <link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
    <script language="javascript" src="<?php echo base_url();?>Jquery/app.js"></script>
-
   <style type="text/css">
     .nav .open>a, .nav .open>a:focus, .nav .open>a:hover{
           background-color: white;
@@ -36,13 +33,11 @@
 <body>
 
 <!--start cover image-->
-<div class="container-fluid" style="height: 665px; padding:0;">
-  <div class="cover">
   	<?php
   	$count = 0; 
   	foreach($info as $item):
   	?>
-  		<div id="image-cover" style="background-image:url(<?php echo base_url(). 'uploads/'.$item['image']?>); width: 1349px; height: 665px;">
+  		<div   class="img-responsive" id="image-cover" style="background-image:url(<?php echo base_url(). 'uploads/'.$item['image']?>); width: 1349px; height: 665px;">
 
   			<div class="text-cover">
   				<div class="back-home">
@@ -69,9 +64,6 @@
   		endforeach;
   		?>
   </div>
-</div>
-
-
 <!--end cover-->
 <!--Start Menu-->
 <div class="container-fluid"  style="padding:0; background-color: white;" data-spy="affix" data-offset-top="700" id="menu"> 
@@ -153,49 +145,46 @@
 </div>
 <!-- End menu-->
 <!--Start show image-->
-<div class="container-fluid" style=" margin-right: 25px; position: relative;" id="demo">
-  <div class="row">
-     <?php foreach ($info as $item):?>
-                 <div class="col-sm-3" class="text-center">
-                      <div   class="image-item text-center" style="background-image:url(<?php echo base_url(). 'uploads/'.$item['image']?>);  width: 321px; height:214px;">
+<div class="container-fluid" id="demo">
+        <?php foreach ($info as $item):?>
+          <div  class="image-item" style="background-image:url(<?php echo base_url(). 'uploads/'.$item['image']?>);  width: 321px; height:214px;">
+                <ul style="list-style-type: none;">
+                  <li style="float: right;" class="dropdown1">
+                    <a href="#" class="btn1-share">
+                         <i class="fa fa-share fa-fw"></i>
+                    </a>
+                    <div class="drop-share">
+                        <a href="#" class="btn-face">
+                          <i class="fa fa-fw fa-facebook-square"></i>
+                        </a>
 
-                        <ul style="list-style-type: none;">
-                          <li style="float: right;" class="dropdown1">
-                            <a href="#" class="btn1-share">
-                                 <i class="fa fa-share fa-fw"></i>
-                            </a>
-                            <div class="drop-share">
-                                <a href="#" class="btn-face">
-                                  <i class="fa fa-fw fa-facebook-square"></i>
-                                </a>
+                        <a href="#" class="btn-twitter">
+                          <i class="fa fa-fw fa-twitter-square"></i>
+                        </a>
 
-                                <a href="#" class="btn-twitter">
-                                  <i class="fa fa-fw fa-twitter-square"></i>
-                                </a>
+                        <a href="#" class="btn-print">
+                          <i class="fa fa-fw fa-pinterest-square"></i>
+                        </a>
 
-                                <a href="#" class="btn-print">
-                                  <i class="fa fa-fw fa-pinterest-square"></i>
-                                </a>
+                        <a href="#" class="btn-google">
+                         <i class="fa fa-fw fa-google-plus-square"></i>
+                        </a>
 
-                                <a href="#" class="btn-google">
-                                 <i class="fa fa-fw fa-google-plus-square"></i>
-                                </a>
-
-                                <a href="#" class="btn-email">
-                                  <i class="fa fa-fw fa-envelope-square"></i>
-                                </a>
-                            </div>
-                          </li>
-                          <li style="float: right;">
-                              <a href="#" class="btn1-heart">
-                                  <i class="fa fa-heart fa-fw"></i>
-                              </a>
-                          </li>
-                        </ul>
-                        
-                      </div>
-                 </div>
-             <?php endforeach ;?>  
+                        <a href="#" class="btn-email">
+                          <i class="fa fa-fw fa-envelope-square"></i>
+                        </a>
+                    </div>
+                  </li>
+                  <li style="float: right;">
+                      <a href="#" class="btn1-heart">
+                          <i class="fa fa-heart fa-fw"></i>
+                      </a>
+                  </li>
+                </ul>
+              </div>  
+        <?php
+        endforeach ;
+        ?>
 </div>
 <!--End show image-->
 <!--show full Images-->
