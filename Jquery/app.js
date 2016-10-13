@@ -17,7 +17,6 @@ $(document).ready(function() {
                 $("#menu").css("display","none");
                 $("#showImage").css("background-image", imgURL);
                 $("#showImage").css("background-repeat", "no-repeat");
-                $("#showImage").css("background-size", "847.5px 565px")
                 $("#divShow").css("display", "block");
                 scrollBody(false);
                 $("#showImage").css("display", "block");
